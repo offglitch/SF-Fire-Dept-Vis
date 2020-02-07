@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<!-- head -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>SF Fire Dept. Calls</title>
+  <!-- bulma 0.7.2 and font awesome v5.7.1 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" integrity="sha256-2pUeJf+y0ltRPSbKOeJh09ipQFYxUdct5nTY6GAXswA=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../styles/style.css">
+</head>
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+<!-- body -->
+<body>
+  <!-- header -->
+  <section class="hero is-success is-bold">
+    <!-- todo: change assignment and name -->
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Visualization 3
+        </h1>
+        <h2 class="subtitle">
+          by Majid Alturki
+        </h2>
+
+      </div>
+    </div>
+
+    <div class="hero-foot">
+
+      <div class="container">
+
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+
+          <div id="main-navbar" class="navbar-menu">
+            <a class="navbar-item" href="../../index.html">
+              <span class="icon">
+                <i class="fas fa-home"></i>
+              </span>
+              <span>Home</span>
+            </a>
+
+            <a class="navbar-item" href="../data_and_processing.html">
+              <span class="icon">
+                <i class="fas fa-chart-area"></i>
+              </span>
+              <span>Data and Processing</span>
+            </a>
+
+            <!-- visualizations -->
+            <a class="navbar-item" href="visualization1.html">
+              <span class="icon">
+                <i class="fas fa-chart-area"></i>
+              </span>
+              <span>Visualization 1</span>
+            </a>
+
+            <a class="navbar-item" href="visualization2.html">
+              <span class="icon">
+                <i class="fas fa-chart-area"></i>
+              </span>
+              <span>Visualization 2</span>
+            </a>
+
+            <a class="navbar-item" href="visualization3.html">
+              <span class="icon">
+                <i class="fas fa-chart-area"></i>
+              </span>
+              <span>Visualization 3</span>
+            </a>
+
+            <a class="navbar-item" href="../prototypes.html">
+              <span class="icon">
+                <i class="fas fa-chart-area"></i>
+              </span>
+              <span>Prototypes</span>
+            </a>
+          </div>
+
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container content">
+      <h2 class="content_title">Visualization</h2>
+      <svg id="my_viz" style="background-color: white;"></svg>
+      <p id="highlight1" style="color : red; font-size: 16px">Call Type: </p>
+      <p id="highlight2" style="color : red; font-size: 16px">Neighborhooods: </p>
+      <p id="highlight3" style="color : red; font-size: 16px">Average Response Time: </p>
+      <h2 class="content_title">Interpretation</h2>
+      <ul>
+        <li><strong>Summary: </strong> This visualization shows the average response time
+          in minutes for the four most frequent call types and all neighborhoods that the SF Fire Department responded to in January 2019.</li>
+          <li>
+            <strong>Interpretation:</strong><br>
+            In
+            <a href="visualization1.html" target="_blank">
+              visualization 1
+            </a>
+            you can see the four most common incident calls which were: medical incident, alarms, structure fire, and
+            structure fire.
+            <br>
+            In <a href="visualization2.html" target="_blank">visualization 2</a>
+            you can see the average response time in minutes for all call types.
+            <br>
+            To dive deeper into the data, in Vis 3, I selected four of the most frequent call types and displayed the response time in all neighborhoods.
+            <br>
+            From this graph, we can compare the response time in different neighborhoods for different call type.
+            <br>
+            As you can see, the response time for Structure Fire in Mission Bay & Treasure Island & Presideio is tremondously slower than others.
+          </li>
+          <li>
+            <strong>Interactivity: </strong>
+            Hover over the colorful rectangles, specific info would be displayed below the graph, which shows the Call Type, Neighborhoods and Avg. Response Time.
+            <br>
+            It's helpful for users to understand which square represents what(In prototype the Neighborhoods is hard to read).
+          </li>
+        </ul>
+        <h2 class="content_title">Credit</h2>
+        <ul>
+        <li>I used a <a href="https://www.d3-graph-gallery.com/graph/heatmap_style.html" target="_blank">D3 Graph Gallery</a> from Ian YF Chang
+           to learn how to implement the heat map above. Again, another great resource that I learned a lot from.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- separator between sections -->
+    <hr class="container">
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <small>
+          <a href="#top">
+            <span class="fas fa-arrow-up"></span>
+            <span>Back to Top</span>
+          </a>
+          <br/>
+          <a>CS 360/560 Data Visualization</a>
+          &bullet;
+          <a href="https://myusf.usfca.edu/arts-sciences/computer-science">Department of Computer Science</a>
+          &bullet;
+          <a href="https://www.usfca.edu/">University of San Franciscio</a>
+        </small>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://d3js.org/d3.v5.js"></script>
+    <script src="../../scripts/visualization3.js"></script>
+    <!-- end body and html -->
+  </body>
+  </html>

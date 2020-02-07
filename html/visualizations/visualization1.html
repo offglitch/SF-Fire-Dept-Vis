@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<!-- head -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>SF Fire Dept. Calls</title>
+  <!-- bulma 0.7.2 and font awesome v5.7.1 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" integrity="sha256-2pUeJf+y0ltRPSbKOeJh09ipQFYxUdct5nTY6GAXswA=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <link rel="stylesheet" href="../../styles/style.css">
+</head>
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+<!-- body -->
+<body>
+
+  <!-- header -->
+  <section class="hero is-success is-bold">
+    <!-- todo: change assignment and name -->
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Visualization 1
+        </h1>
+        <h2 class="subtitle">
+          by Majid Alturki
+        </h2>
+
+      </div>
+    </div>
+
+    <div class="hero-foot">
+
+      <div class="container">
+
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+
+          <div id="main-navbar" class="navbar-menu">
+            <a class="navbar-item" href="../../index.html">
+              <span class="icon">
+                <i class="fas fa-home"></i>
+              </span>
+              <span>Home</span>
+            </a>
+
+            <a class="navbar-item" href="../data_and_processing.html">
+              <span class="icon">
+                <i class="fas fa-chart-area"></i>
+              </span>
+              <span>Data and Processing</span>
+            </a>
+
+            <a class="navbar-item" href="visualization1.html">
+              <span class="icon">
+                <i class="fas fa-chart-area"></i>
+              </span>
+              <span>Visualization 1</span>
+            </a>
+
+            <a class="navbar-item" href="visualization2.html">
+              <span class="icon">
+                <i class="fas fa-chart-area"></i>
+              </span>
+              <span>Visualization 2</span>
+            </a>
+
+            <a class="navbar-item" href="visualization3.html">
+              <span class="icon">
+                <i class="fas fa-chart-area"></i>
+              </span>
+              <span>Visualization 3</span>
+            </a>
+
+            <a class="navbar-item" href="../prototypes.html">
+              <span class="icon">
+                <i class="fas fa-chart-area"></i>
+              </span>
+              <span>Prototypes</span>
+            </a>
+          </div>
+
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container content">
+      <h2 class="content_title">Visualization</h2>
+      <svg width="100%" height="400" style="background-color: whitesmoke; border: 1px solid black; color:black;">
+      </svg>
+      <h2 class="content_title">Interpretation</h2>
+      <ul>
+        <li><strong>Summary: </strong> Shows the most common calls that the San Francisco Fire Department received in January 2019.</li>
+        <li><strong>Interpretation: </strong>This visualization shows the major call types which are Medical incident, Alarms, Struncture Fire, and Traffic Collisions.
+        These four call types are in total more than 92% of all calls. Consequently, in the next visualizations the focus will be on these four major incidents.<br>
+        <a href="visualization2.html">visualization 2 </a><br>
+      <a href="visualization3.html">visualization 3 </a></li>
+
+      <li><strong>Interactivity: </strong> There's two Interactivity features in this visualization. By hovering the mouse over the pie chart you can see the name and number of incidents for the selected part.
+      By selecting a legend color, the related part of the chart to that color will be highlighted and the other parts of the graph will fade into the background.</li>
+      </ul>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container content">
+      <h2 class="content_title">Visualization</h2>
+      <svg width="100%" height="400" style="background-color: darkgrey; border: 1px solid black; color:black;">
+      </svg>
+      <h2 class="content_title">Interpretation</h2>
+      <ul>
+        <li><strong>Summary: </strong> Parallel Coordinates that shows the average response time in January 2019 considering three different dimensions which are
+        Priority of Calls, Group Type and Call Type. Although there is an axis showing the Group Types, colors are based on the Group Type which is not conveying any new information but helps with the readability of the graph.
+        Users can follow and observe average response time (which is the last axis) according to these dimentions.</li>
+        <li><strong>Interpretation: </strong>This visualization contains a lot of information. We can follow the average response time according to different priorities or observe how fast different groups are reacting to
+        different kinds of incidents, for instance the majority of Traffic Collisions are catogorized as priority 3. One thing to put into consideration is the probablity that this group expriences traffic before arriving on the scene, thus their average response time is among the highest.</li>
+
+        <li><strong>Interactivity: </strong>By hovering over any line, the path related to that line will be highlighted, along with the average response time according to that path will be displayed in the white box next to the last axis.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- separator between sections -->
+  <hr class="container">
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <small>
+        <a href="#top">
+          <span class="fas fa-arrow-up"></span>
+          <span>Back to Top</span>
+        </a>
+        <br/>
+        <a>CS 360/560 Data Visualization</a>
+        &bullet;
+        <a href="https://myusf.usfca.edu/arts-sciences/computer-science">Department of Computer Science</a>
+        &bullet;
+        <a href="https://www.usfca.edu/">University of San Franciscio</a>
+      </small>
+    </div>
+  </footer>
+
+  <script src="../../scripts/visualization1.js"></script>
+  <script src="../../scripts/visualization1-part2.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <!-- end body and html -->
+</body>
+
+</html>

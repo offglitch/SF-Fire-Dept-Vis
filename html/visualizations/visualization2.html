@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<!-- head -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .toolTip {
+      position: absolute;
+      display: none;
+      min-width: 80px;
+      height: auto;
+      background: none repeat scroll 0 0 #ffffff;
+      border: 1px solid red;
+      padding: 14px;
+      text-align: center;
+    }
+    /* .resetDiv {
+      position: absolute;
+      display: none;
+      left: 0;
+      top: 0;
+      min-width: 80px;
+      height: auto;
+      background: none repeat scroll 0 0 #ffffff;
+      border: 1px solid #6F257F;
+      padding: 14px;
+      text-align: center;
+    } */
+
+    .reset-button {
+      background-color: #ff6666;
+    }
+
+    .green-button {
+      background-color: #009900;
+    }
+
+    .orange-button {
+      background-color: orange;
+    }
+
+    *:focus {
+      outline: none;
+    }
+  </style>
+  <title>SF Fire Dept. Calls</title>
+  <!-- bulma 0.7.2 and font awesome v5.7.1 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" integrity="sha256-2pUeJf+y0ltRPSbKOeJh09ipQFYxUdct5nTY6GAXswA=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../styles/style.css">
+</head>
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+<!-- body -->
+<body>
+  <!-- header -->
+  <section class="hero is-success is-bold">
+    <!-- todo: change assignment and name -->
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Visualization 2
+        </h1>
+        <h2 class="subtitle">
+          by Majid Alturki
+        </h2>
+
+      </div>
+    </div>
+
+    <div class="hero-foot">
+
+      <div class="container">
+
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+
+          <div id="main-navbar" class="navbar-menu">
+
+            <a class="navbar-item" href="../../index.html">
+              <span class="icon">
+                <i class="fas fa-home"></i>
+              </span>
+              <span>Home</span>
+            </a>
+
+            <a class="navbar-item" href="../data_and_processing.html">
+              <span class="icon">
+                <i class="fas fa-chart-area"></i>
+              </span>
+              <span>Data and Processing</span>
+            </a>
+
+            <!-- visualizations -->
+            <a class="navbar-item" href="visualization1.html">
+              <span class="icon">
+                <i class="fas fa-chart-area"></i>
+              </span>
+              <span>Visualization 1</span>
+            </a>
+
+            <a class="navbar-item" href="visualization2.html">
+              <span class="icon">
+                <i class="fas fa-chart-area"></i>
+              </span>
+              <span>Visualization 2</span>
+            </a>
+
+            <a class="navbar-item" href="visualization3.html">
+              <span class="icon">
+                <i class="fas fa-chart-area"></i>
+              </span>
+              <span>Visualization 3</span>
+            </a>
+
+            <a class="navbar-item" href="../prototypes.html">
+              <span class="icon">
+                <i class="fas fa-chart-area"></i>
+              </span>
+              <span>Prototypes</span>
+            </a>
+          </div>
+
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+
+    <div class="container content">
+      <h2 class="content_title">Visualization</h2>
+      <div class="reset">
+        <input class="reset-button" style="margin-bottom: 0px;margin-left:0px"; type="button" value="Reset Visualization"/>
+      </div>
+      <div class="lowerData">
+        <input class="green-button" style="margin-bottom: 0px;margin-left:0px"; type="button" value="View Green Bar Range"/>
+      </div>
+      <div class="fiveCommon">
+        <input class="orange-button" style="margin-bottom: 0px;margin-left:0px"; type="button" value="View Four Most Common Calls"/>
+      </div>
+      <svg class="chart1" width="100%" height="600" style="background-color: whitesmoke; border: 1px solid black;"></svg>
+      <h2 class="content_title">Interpretation</h2>
+      <ul>
+        <li><strong>Summary: </strong> This visualization shows the average response time
+          in minutes for all calls that the SF Fire Department responded to in January 2019.</li>
+        <li><strong>Interpretation: </strong> In <a href="visualization1.html" target="_blank">
+          visualization 1 </a>you can see the four most common incident calls which were: Medical Incident, Alarms, Structure fire, and
+          , also Structure Fire. If you select the "View Green Bar Range" option followed by the "View Four Most Common Calls" selection
+          you can see that the four most common calls are on the lower end in average response time. Based off the data, the SF
+          Fire Department appears to have lower response times on the four most common call types. The fire department could
+          could be prioritizing these calls or simply improving their efficiency on the most common calls. This graph tells
+          us that they are aware of the most common calls and are quicker in responding and arriving on scene.</li>
+        <li><strong>Interactivity: </strong>Visualization two has three buttons: Reset Visualization, View Green Bar Range, and View Four Most Common Calls.
+          The first button, Reset Visualization, restores the original bar coloring and the original x-axis size. The second
+          button, View Green Bar Range, adjusts the range of the x-axis to range from zero to six to show relative
+          sized of the green bars better and excludes the two large red-colored outliers. The third button,
+          View Four Most Common Calls, grays out all calls except the four most common call types from
+          <a href="visualization1.html" target="_blank">visualization 1 </a>.
+          Additionally, the user can hover over any individual bar to view the Call Type, Average Response in Minutes, Number of Calls,
+          Low Value, and High Value. The user can also click any bar to gray out all others to isolate the clicked bar for further analysis.
+          </li>
+      </ul>
+      <h2 class="content_title">Credit</h2>
+      <ul>
+      <li>I used a <a href="https://bl.ocks.org/duspviz-mit/9b6dce37101c30ab80d0bf378fe5e583" target="_blank">Block</a> from user DUSPViz which helped me learn and understand a really
+         nice and lightweight strategy to create a gradient color filled legend scale.</li>
+      <li>I used a <a href="http://bl.ocks.org/Caged/6476579" target="_blank">Block</a> from Justin Palmer which assisted
+        me with the tooltip hover feature on the individual bars. This introduced me to the events and
+        really helped me learn a lot.</li>
+      <li>I used the <a href=" https://beta.observablehq.com/d/28ba93f58fb82f49" target="_blank">Observable</a>
+        from class which assisted me in loading the data into my code and the <a href="https://blockbuilder.org/sjengle/1e23258249638a508426470a48ff2924">
+        BlockBuilder</a> where I learned how to create bar charts.</li>
+
+      </ul>
+    </div>
+  </section>
+
+  <!-- separator between sections -->
+  <hr class="container">
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <small>
+        <a href="#top">
+          <span class="fas fa-arrow-up"></span>
+          <span>Back to Top</span>
+        </a>
+        <br/>
+        <a>CS 360/560 Data Visualization</a>
+        &bullet;
+        <a href="https://myusf.usfca.edu/arts-sciences/computer-science">Department of Computer Science</a>
+        &bullet;
+        <a href="https://www.usfca.edu/">University of San Franciscio</a>
+      </small>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://d3js.org/d3.v5.js"></script>
+  <script src="../../scripts/visualization2.js"></script>
+  <script>loadingChart2()</script>
+  <!-- end body and html -->
+</body>
+</html>
